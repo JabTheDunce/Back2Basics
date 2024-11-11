@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css"/>
+        <link rel="stylesheet" href="global.css">
+        <link rel="stylesheet" href="learnhtml.css">
+        <title>BackToBasics</title>
+    </head>
+    <body>
+
+        <div class="header sticky"><!--
+            --><div class="nav-bar"><!--
+                --><div class="nav-header"><!--
+                    --><div class="nav-item nav-title"><a><img class="logo" src="LogoSolo.png" alt="Back2Basics"></a></div><!--
+                    --></div><!--
+                    --><div class="nav-links"><!--
+                    --><div class="nav-item"><a class="clickable" href="HomePage.html">Home</a></div><!--
+                --><div class="nav-item"><a class="clickable" href="study.html">Study</a></div><!--
+                --><div class="nav-item"><a class="clickable" href="TheCourse.html">The Course</a></div><!--
+                --><div class="nav-item"><a class="clickable pressed">Learn HTML</a></div><!--
+                --><div class="nav-item"><a class="clickable" href="Contact_us.html">Contact Us</a></div><!--
+                --></div><!--
+            --></div><!--
+        --></div>
+    
+        <div class="content">
+            <div class="content-page">
+                <div class="black-block">
+                    <h1 class="content-header-1">1.0&emsp;The Basics</h1>
+                    <p class="content-paragraph-1">
+                        HTML stands for HyperText Markup Language, this is a markup language which is designed 
+                        to describe the layouts of elements in a web-page. Elements are described using tags and 
+                        the syntax for a tag is as follows: <span class="code">&lt;tag-name&gt;</span>. This is
+                        called an opening tag, and marks the start of an element, such as a paragraph, to close a tag
+                        it is the same, but it contains a leading forward-slash: <span class="code">&lt;/tag-name&gt;</span>,
+                        and all contents should go between these too for said element. Some examples of tags include: 
+                        <span class="code">&lt;html&gt;</span> wraps all HTML code, 
+                        <span class="code">&lt;head&gt;</span> wraps all meta-data stuff which isn't shown, 
+                        <span class="code">&lt;body&gt;</span> wraps all content which is shown, 
+                        <span class="code">&lt;p&gt;</span> starts a paragraph, 
+                        <span class="code">&lt;div&gt;</span> a container, etc.
+                    </p>
+                </div>
+
+                <div class="yellow-block">
+                    <h2 class="content-header-2">1.1&emsp;Starting a document</h2>
+                    <p class="content-paragraph-1">
+                        To start a HTML document, you should start by writing <span class="code">&lt;!DOCTYPE html&gt;</span>,
+                        this tells the browser that this is a HTML file, and lets it know how to parse it. You should follow 
+                        this up with a set of html tags and then any markup for the web-page itself should go inside of here.
+                        Inside of this, you should add head and body tags, and use them as described above. This should give you
+                        a layout similar to this: 
+                        <span class="code-block">
+                            &lt;!DOCTYPE html&gt;<br>
+                            &lt;html&gt;<br>
+                            &emsp;&lt;head&gt;<br>
+                            &emsp;&emsp;&lt;!-- Meta-data goes here! --&gt;<br>
+                            &emsp;&lt;/head&gt;<br>
+                            &emsp;&lt;body&gt;<br>
+                            &emsp;&emsp;&lt;!-- Page contents go here! --&gt;<br>
+                            &emsp;&lt;/body&gt;<br>
+                            &lt;/html&gt;<br>
+                        </span>
+                        You can see I used <span class="code">&lt;!-- comment --&gt;</span> to write text without showing it
+                        on the web-page. This can be used to annotate & comment on your own code, without affecting the code! 
+                        You can now place anything you need to be displayed inside your body tags. Let's start by doing a basic 
+                        header and some text.
+                        <span class="code-block">
+                            &lt;!DOCTYPE html&gt;<br>
+                            &lt;html&gt;<br>
+                            &emsp;&lt;head&gt;<br>
+                            &emsp;&emsp;&lt;!-- Meta-data goes here! --&gt;<br>
+                            &emsp;&lt;/head&gt;<br>
+                            &emsp;&lt;body&gt;<br>
+                            &emsp;&emsp;&lt;!-- Page contents go here! --&gt;<br>
+                            &emsp;&emsp;&lt;h1&gt;This is a large header!&lt;/h1&gt;<br>
+                            &emsp;&emsp;&lt;p&gt;This is a paragraph&lt;/p&gt;<br>
+                            &emsp;&lt;/body&gt;<br>
+                            &lt;/html&gt;<br>
+                        </span>
+                        The <span class="code">&lt;h1&gt;</span> tag is used for a large header, h stands for header and 1 is the 
+                        largest size, instead of a 1, you could put any number from 1 to 6, to define a header of a different size,
+                        6 being the smallest. <span class="code">&lt;p&gt;</span> is used to define a paragraph, which is a much 
+                        smaller font size. 
+                    </p>
+                </div>
+
+                <div class="black-block">
+                    <h1 class="content-header-1">2.0&emsp;Adding Stylesheets</h2>
+                    <p class="content-paragraph-1">
+                        CSS is used to style, position and format the elements described by your HTML, you can give an element a class or an ID 
+                        using the following: <span class="code">&lt;p class="paragraph" id="first-paragraph"&gt;&lt;/p&gt;</span>. This allows us to 
+                        reference the element in CSS easily, in our new stylesheet named <span class="code">style.css</span>, we can reference this paragraph in 3 different ways:
+                        <span class="code-block">
+                            p { /*this references all &lt;p&gt; elements in the code!*/<br>
+                            &emsp;color: red;<br>
+                            }<br><br>
+
+                            .paragraph { /*this references all classes named "paragraph"!*/<br>
+                            &emsp;text-align: center;<br>
+                            }<br><br>
+
+                            #first-paragraph { /*this references the single ID "first-paragraph"!*/<br>
+                            &emsp;font-size: 40px;<br>
+                            }<br>
+                        </span>
+                        Comments in CSS are also described using <span class="code">/*</span> to open a comment and <span class="code">*/</span> to close a comment. From the example, you can see the name of 
+                        the element being addressed is written and then followed by a compound block denoted with braces {}, all styling and such goes inside
+                        the compound block, and the end of a line is terminated using <span class="code">;</span>. We only showcase some simple styling here, we first set all paragraph's 
+                        (<span class="code">&lt;p&gt;</span>)
+                        text colour to red, and follow by setting every <span class="code">.paragraph</span> classed element to be aligned to the centre, and finally finish by setting the font
+                        size for all elements with an ID of <span class="code">#first-paragraph</span>. This leaves our paragraph described above to have all of its content centered, large and red!
+                        But now we need to somehow link this to our HTML file for it to actually work, we can this using the <span class="code">&lt;link&gt;</span> tag, this should be placed in your header
+                        as it is not content we want to be displayed for the user, it is meta-data and such which make our website work. 
+                        <span class="code-block">
+                            &lt;link rel="stylesheet" href="style.css"&gt;
+                        </span> You can see the <span class="code">rel</span> tells the browser what this file actually is, and the <span class="code">href</span> is used to share the location of the file,
+                        in this scenario we're placing our HTML file in the same directory as our style.css! If you return to your HTML file you should be able to see the result of this styling on any paragraphs!
+                        Hopefully, you can see how this can be used to style other elements in a similar fashion, these are not the only flags we have to control the style
+                        of an element, we could also set the height and width, add a background image or background colour, we could even set our own font, but to keep this 
+                        tutorial relatively simple, I will leave these styles as an exercise to the reader! 
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        <!--
+
+        <div class="footer">
+            <div class="footer-page">
+                <p class="footer-text">
+                    Copyright &copy; 2022 Who. All rights reserved.
+                </p>
+            </div>
+        </div>
+
+        -->
+
+    </body>
+</html>

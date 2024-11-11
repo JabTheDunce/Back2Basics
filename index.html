@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html>
+  <head> 
+
+    <link rel="stylesheet" href="global.css">
+    <link rel="stylesheet" href="UniLifeStyle.css">
+
+    <style>
+          a { text-decoration: none; }
+    </style>
+      
+    <script>
+function reveal() {
+  var reveals = document.querySelectorAll(".reveal");
+
+  for (var i = 0; i < reveals.length; i++) {
+    var windowHeight = window.innerHeight;
+    var elementTop = reveals[i].getBoundingClientRect().top;
+    var elementVisible = 150;
+
+    if (elementTop < windowHeight - elementVisible) {
+      reveals[i].classList.add("active");
+    } else {
+      reveals[i].classList.remove("active");
+    }
+  }
+}
+
+window.addEventListener("scroll", reveal);
+    </script>
+    
+    <title>BackTooBasics</title>
+  </head>
+  <body>
+      
+    <div id="page">
+
+      <div class="header sticky"><!--
+      --><div class="nav-bar"><!--
+          --><div class="nav-header"><!--
+              --><div class="nav-item nav-title"><a><img class="logo" src="LogoSolo.png" alt="Back2Basics"></a></div><!--
+              --></div><!--
+              --><div class="nav-links"><!--
+              --><div class="nav-item"><a class="clickable pressed" href="HomePage.html">Home</a></div><!--
+          --><div class="nav-item"><a class="clickable" href="study.html">Study</a></div><!--
+          --><div class="nav-item"><a class="clickable" href="TheCourse.html">The Course</a></div><!--
+          --><div class="nav-item"><a class="clickable" href="learnhtml.html">Learn HTML</a></div><!--
+          --><div class="nav-item"><a class="clickable" href="Contact_us.html">Contact Us</a></div><!--
+          --></div><!--
+      --></div><!--
+   --></div>
+
+      <div id="content">
+            
+            <!--First section-->
+            <div class="container">
+            <div style="background-image: url('background.jpg'); 
+             background-size: cover; height:400px; padding-top:80px;">
+
+            <div class="centered">
+                <div><h1 style="color:#000">Back2Basics</h1></div>
+            </div>
+          </div>
+            <!--only duped as stop gap to hide colour switch 
+
+            
+            <div id="navigation">
+                <div id="navitem"><a>Home</a></div>
+                <div id="navitem"><a>Study</a></div>
+                <div id="navitem"><a href="https://www.bbc.co.uk/">BBC</a></div>
+                <div id="navitem"><a>HTML</a></div>
+                <div id="navitem"><a>Contact Us</a></div>
+            </div>
+            -->
+            
+             <!--only duped as stop gap to hide colour switch lmaooooooo 
+            
+                <div id="scroll-container">
+                <div id="scroll-text"><div id="navigation">
+                    <div id="navitem"><a>Home</a></div>
+                    <div id="navitem"><a>Study</a></div>
+                    <div id="navitem"><a>Uni Life</a></div>
+                    <div id="navitem"><a>HTML</a></div>
+                    <div id="navitem"><a>Contact Us</a></div>
+                
+                unless the holy sidestepper
+
+                </div></div>
+               
+            -->
+              
+            </div>
+
+             
+            <div id="information">
+              <div id="coursecontent">
+                  <h1>OverView</h1>
+                  <p style="width:90vw">
+                   
+                    Welcome to our website.Our goal is to shed some light on the foundational course, specifically in the field of computer science. On this page, you'll find brief overviews of some of the primary topics we discuss.
+
+
+                      <br><br>
+                      As such, there are brief overviews of the primary topics discussed right here on this page!
+                      <br><br>
+                      P.S. Try clicking the word "computational thinking".
+
+                      <br><br>
+                     
+                  </p>
+                  <br><br> <br><br>
+                  <div class="centered2">
+                    <div class="button" style="color: azure; border:5px solid wheat; padding: 10px; margin:10px;"><a href="#end">Computational Thinking</a></div>
+                </div>
+              </div>
+            </div>
+            <div id="end"></div>
+
+
+            <div class="container reveal">
+                
+        <!--Dont touch this is what flips whites and yeylows idk why lmaooooooo -->
+
+            </p>
+
+        <section>
+            
+            <h1>Sections Explained &#8595;</h1> 
+          </section>
+          <section>
+            <div class="container reveal">
+              <h2>Study</h2>
+              <div class="text-container">
+                <div class="text-box" style="background: #30519D;">
+                  <h3>Techniques</h3>
+                  <p>
+                     There are numerous techniques that can assist you in studying, they all require the base commitment to attempt to study.  
+                  </p>
+                </div>
+                <div class="text-box" style="background: #30519D;">
+                  <h3>Why Studying?</h3>
+                  <p>Although daunting studing is a vital aspect of not only university but of life hence it's discussion here</p>
+                </div>
+                <div class="text-box" style="background: #30519D;">
+                  <h3>Videos</h3>
+                  <p>
+                    The videos provided attempt to highlight how any academic situation can be reversed as well as how others have tread the course you may currently be on.   
+                  </p>
+                </div>
+              </div>
+              <div class="centered3">
+                <div class="button2" style="border:5px solid wheat; padding: 10px; margin:10px;"><a href="study.html">Go to Study</a></div>
+              </div>
+            </div>
+            
+          </section>
+          
+          
+          <section>
+            <div class="container reveal">
+              <h2>The Course</h2>
+              <div class="text-container">
+                <div class="text-box">
+                  <h3>Lecture</h3>
+                  <p>
+                    As with all degress the primary source of learning will be in lectures
+                  </p>
+                </div>
+                <div class="text-box">
+                  <h3>Blackboard</h3>
+                  <p>
+                    A web-based learning system that'll you'll grow to know in and out, as it's the primary source of content and will remain as such throughout your degree
+                  </p>
+                </div>
+                <div class="text-box">
+                  <h3>Tutorial</h3>
+                  <p>
+                    These mandatory sessions allow you to further familiarize yourself with the content as well as attempt some more challenging questions
+                  </p>
+                </div>
+              </div>
+              <div class="centered3">
+                <div class="button2" style="border:5px solid wheat; padding: 10px; margin:10px;"><a href="TheCourse.html">Go to Course</a></div>
+              </div>
+            </div>
+          </section>
+          
+          <section>
+            <div class="container reveal">
+              <h2>Learn HTML</h2>
+              <div class="text-container">
+                <div class="text-box">
+                  <h3>CSS</h3>
+                  <p>
+                    Standing for Cascading Style Sheets, It's a language used to style HTML and XML documents allowing for easy website customization and responsive design.
+                  </p>
+                </div>
+                <div class="text-box">
+                  <h3>HTML</h3>
+                  <p>
+                    HTML is a standard language used for creating web pages and other online content and is what this very website is based on.
+
+                  </p>
+                </div>
+                <div class="text-box">
+                  <h3>Stylesheets</h3>
+                  <p>
+                    In HTML, stylesheets are used to apply formatting and layout to web pages. They can be embedded in the HTML document or linked to externally.
+                  </p>
+                </div>
+              </div>
+              <div class="centered3">
+                <div class="button2" style="border:5px solid wheat; padding: 10px; margin:10px;"><a href="learnhtml.html">Go to Learn HTML</a></div>
+              </div>
+            </div>
+          </section>
+
+          <div style="background-image: url('background.jpg'); 
+          background-size: cover; height:400px; padding-top:370px;"> 
+
+         <div>
+             <div style="color:#000; ">© 2023 Back2Basics</div>
+         </div>
+ </div>
+
+    </div>
+    
+      </div>
+    </div>
+</body>    
+
+</html>

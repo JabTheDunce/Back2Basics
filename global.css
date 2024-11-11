@@ -1,0 +1,416 @@
+:root {
+  --yellow: #ebcc34;
+  --black: #000000;
+  --white: #ffffff;
+
+  --navbg: var(--yellow); /*nav background*/
+  --navhv: var(--black);  /*nav hover*/
+  --navpr: var(--black);  /*nav pressed*/
+  --navcr: var(--white);  /*nav text colour*/
+}
+
+/*
+ * NAV BAR STARTS 
+ */
+
+.header {
+  display: block;
+  width: 100vw;
+  max-width:100%;
+  
+  background-color: var(--yellow);
+  color: var(--navcr);
+  
+  /*only shows when sticky*/
+  -webkit-box-shadow: 0px 0px 5px 1px rgba(0,0,0,0.4);
+  -moz-box-shadow: 0px 0px 5px 1px rgba(0,0,0,0.4);
+  box-shadow: 0px 0px 5px 1px rgba(0,0,0,0.4);
+
+  z-index: 999;
+}
+
+.nav-bar {
+  margin: auto;
+  display: block;
+  width: 900px;
+  height: 50px;
+}
+
+.nav-header {
+  display: inline-block;
+}
+
+.nav-links {
+  display: inline-block;
+}
+
+.nav-item {
+  display: inline-table;
+  height: 50px;
+
+  /*900px minimum screen-size*/
+  width: 150px;
+}
+
+/*makes the nav-bar stick to the top.*/
+.sticky {
+  position: fixed;
+  top: 0;
+  width: 100%;
+}
+
+@media only screen and (max-width:900px) {
+
+  .nav-header {
+      display: block;
+  }
+  
+  .nav-links {
+      display: block;
+  }
+
+  .nav-bar {
+      margin: auto;
+      display: block;
+      width: 100vw;
+      max-width: 100%;
+      height: 100%;
+  }
+
+  .nav-item {
+      display: table;
+      height: 50px;
+      width: 100vw;
+      max-width: 100%;
+  }
+
+  .sticky {
+      position: static;
+      top: 0;
+      width: 100%;
+  }
+}
+
+@media only screen and (max-height:400px) {
+  .sticky {
+      position: static;
+      top: 0;
+      width: 100%;
+  }
+}
+
+.nav-item a {
+  display: table-cell;
+
+  text-align: center;
+  text-transform: uppercase;
+  vertical-align: middle;
+
+  font-family: 'Roboto', 'Arial', sans-serif;
+  font-size: 16px;
+  font-weight: 600;
+
+  cursor: pointer;
+
+  /*overrides*/
+  color: var(--navcr);
+  text-decoration: none;
+}
+
+.nav-title a {
+  text-decoration: underline 0.2em rgba(255, 255, 255, 0);
+  text-underline-offset: 0em;
+  transition: text-decoration-color 200ms, text-underline-offset 400ms;
+}
+
+.nav-title a:hover {
+text-decoration-color: rgba(255, 255, 255, 1);
+  text-underline-offset: 0.4em;
+}
+
+.clickable {
+  cursor: pointer;
+  transition: background-color 125ms;
+}
+
+.clickable:hover {
+  background-color: var(--navhv);
+}
+
+.pressed {
+  background-color: var(--navpr);
+}
+
+/*
+ * NAV-BAR .CONTENT STARTS
+ * (makes nav-bar work)
+ */
+
+.content {
+  display: inline-block;
+  width: 100vw;
+  max-width: 100%;
+
+  /*for the sticky nav-bar*/
+  padding-top: 50px;
+}
+
+@media only screen and (max-width:950px) {
+  .content {
+      padding-top: 0px;
+  }
+}
+
+@media only screen and (max-height:400px) {
+  .content {
+      padding-top: 0px;
+  }
+}
+
+/*
+ * NAV-BAR .CONTENT ENDS
+ */
+
+/* 
+ * NAV BAR ENDS 
+ */
+
+body{
+    margin: 0px;
+    padding: 0px;
+    font-family: monospace;
+}
+
+#page {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    width: 100vw;
+    max-width: 100%;
+}
+
+h1 {
+    font-family: Verdana, sans-serif;
+    font-size: 32px;
+    padding: 15px;
+    margin: 0;
+}
+
+h2{ 
+    font-family: Verdana, sans-serif;
+    font-size: 32px;
+    padding-left: 45px;
+    padding: 15px;
+    margin: 0;
+}
+
+p {
+    font-family: Verdana, sans-serif;
+    font-size: 14px;
+    padding-left: 15px;
+    margin: 0;
+}
+
+/* Container holding the image and the text */
+
+.container {
+    position: relative;
+    text-align: center;
+    color: white;
+  }
+
+
+/* Centered text */
+.centered {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+/* Heorhii added */
+.centered2 {
+  position: absolute;
+  left: 50%;
+  transform: translate( -50%, -50%);
+}
+
+.centered3 {
+  position: absolute;
+  left: 50%;
+  transform: translate( -50%, -50%);
+  margin-top: 110px;
+}
+
+.logo {
+  width: 100%;
+  height: 100%;
+  padding: 4px 5px 0 0;
+}
+
+.button {
+  text-decoration: underline;
+  font-size: 32px;
+  padding: 15px;
+  margin: 0;
+  font-weight: bold;
+  text-align: center;
+}
+.button a{
+  font-family: monospace;
+  color: azure;
+}
+
+.button2 {
+  text-decoration: underline;
+  font-size: 32px;
+  padding: 15px;
+  margin: 0;
+  font-weight: bold;
+}
+
+.button2 a{
+  font-family: monospace;
+  color: azure;
+}
+
+
+
+/*side Scroller */
+body {
+    background-color:#f0bb0c;
+}
+
+    #scroll-container {
+        border: 0px solid #f0bb0c;
+        border-radius: 0px;
+        overflow: hidden;
+      }
+      
+      #scroll-text {
+        text-align: right;
+      
+        /* animation properties */
+        -moz-transform: translateX(-100%);
+        -webkit-transform: translateX(-100%);
+        transform: translateX(-100%);
+        
+        -moz-animation: my-animation 15s linear infinite;
+        -webkit-animation: my-animation 15s linear infinite;
+        animation: my-animation 15s linear infinite;
+      }
+      
+      /* for Firefox */
+      @-moz-keyframes my-animation {
+        from { -moz-transform: translateX(-100%); }
+        to { -moz-transform: translateX(100%); }
+      }
+      
+      /* for Chrome */
+      @-webkit-keyframes my-animation {
+        from { -webkit-transform: translateX(-100%); }
+        to { -webkit-transform: translateX(100%); }
+      }
+      
+      @keyframes my-animation {
+        from {
+          -moz-transform: translateX(-100%);
+          -webkit-transform: translateX(-100%);
+          transform: translateX(-100%);
+        }
+        to {
+          -moz-transform: translateX(100%);
+          -webkit-transform: translateX(100%);
+          transform: translateX(100%);
+        }
+      }
+
+/*Main Scroller */
+
+      @import url('https://fonts.googleapis.com/css2?family=Asap&display=swap');
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Asap", sans-serif;
+}
+body{
+  background: #ebcc34;
+  
+}
+section{
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+section:nth-child(1){
+  color: #000000;
+  }
+section:nth-child(2){
+  color: #42455a;
+  background: #000000;
+} 
+section:nth-child(3){
+  color: #000000;
+}
+section:nth-child(4){
+  color: #42455a;
+  background: #000000;
+}
+section .container{
+  margin: 100px;
+}
+section h1{
+  font-size: 3rem;
+  margin: 20px;
+}
+section h2{
+  font-size: 40px;
+  text-align: center;
+  text-transform: uppercase;
+}
+section .text-container{
+   display: flex;
+}
+section .text-container .text-box{
+  margin: 20px;
+  padding: 20px;
+  background: #30519D;
+}
+section .text-container .text-box h3{
+  font-size: 30px;
+  text-align: center;
+  text-transform: uppercase;
+  margin-bottom: 10px;
+}
+
+@media (max-width: 900px){
+  section h1{
+    font-size: 2rem;
+    text-align: center;
+  }
+  section .text-container{
+    flex-direction: column;
+  }
+}
+
+.reveal{
+  position: relative;
+  transform: translateY(150px);
+  opacity: 0;
+  transition: 1s all ease;
+  
+}
+
+.reveal.active{
+  transform: translateY(0);
+  opacity: 1;
+ 
+}
+
+    
+img {
+  width: 200px;
+  height: 300px;
+  object-fit: fill;
+}
